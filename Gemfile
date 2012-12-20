@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+gem 'haml'
+gem 'hpricot'
 gem 'jquery-rails', '~> 2.0.0'
 gem 'pg'
 gem 'rails', '3.2.9'
