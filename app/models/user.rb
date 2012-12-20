@@ -3,12 +3,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :plugins
+  attr_accessible :email, :password, :password_confirmation, :first_name, :last_name, :remember_me, :plugins
 
   has_and_belongs_to_many :roles, :join_table => :roles_users
   has_many :plugins, :class_name => "UserPlugin", :order => "position ASC", :dependent => :destroy
 
-def plugins=(plugin_names)
+  def plugins=(plugin_names)
     if persisted? # don't add plugins when the user_id is nil.
       UserPlugin.delete_all(:user_id => id)
       plugin_names.each_with_index do |plugin_name, index|

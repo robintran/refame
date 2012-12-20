@@ -96,6 +96,18 @@ ActiveRecord::Schema.define(:version => 20121220081047) do
     t.datetime "updated_at",     :null => false
   end
 
+  create_table "roles", :force => true do |t|
+    t.string "title"
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+  end
+
+  add_index "roles_users", ["role_id", "user_id"], :name => "index_roles_users_on_role_id_and_user_id"
+  add_index "roles_users", ["user_id", "role_id"], :name => "index_roles_users_on_user_id_and_role_id"
+
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
     t.string   "seo_meta_type"
@@ -108,6 +120,15 @@ ActiveRecord::Schema.define(:version => 20121220081047) do
 
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
+
+  create_table "user_plugins", :force => true do |t|
+    t.integer "user_id"
+    t.string  "name"
+    t.integer "position"
+  end
+
+  add_index "user_plugins", ["name"], :name => "index_user_plugins_on_name"
+  add_index "user_plugins", ["user_id", "name"], :name => "index_user_plugins_on_user_id_and_name", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
