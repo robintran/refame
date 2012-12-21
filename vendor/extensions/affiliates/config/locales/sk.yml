@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      affiliates:
+        title: Affiliates
+    affiliates:
+      admin:
+        affiliates:
+          actions:
+            create_new: Pridať Affiliate
+            reorder: Preusporiadať Affiliates
+            reorder_done: Koniec radenia Affiliates
+          records:
+            title: Affiliates
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Affiliates. Kliknite na "Pridať Affiliate" pre pridanie prvého affiliate.
+          affiliate:
+            view_live_html: Zobraziť náhľad affiliate<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť affiliate
+            delete: Zmazať affiliate
+      affiliates:
+        show:
+          other: Daľšie Affiliates
+  activerecord:
+    attributes:
+      'refinery/affiliates/affiliate':
+        url: Url
+        title: Title
+        specialist: Specialist
+        photo: Photo

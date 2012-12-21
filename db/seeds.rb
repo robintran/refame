@@ -18,3 +18,6 @@ admin.roles << Role.find_by_title('Refinery')
 admin.roles << Role.find_by_title('Superuser')
 admin.save
 
+
+# Added by Refinery CMS Affiliates extension
+Refinery::Affiliates::Engine.load_seed

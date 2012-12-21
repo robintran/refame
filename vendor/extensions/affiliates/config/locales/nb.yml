@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      affiliates:
+        title: Affiliates
+    affiliates:
+      admin:
+        affiliates:
+          actions:
+            create_new: Lag en ny Affiliate
+            reorder: Endre rekkefølgen på Affiliates
+            reorder_done: Ferdig å endre rekkefølgen Affiliates
+          records:
+            title: Affiliates
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Affiliates enda. Klikk på "Lag en ny Affiliate" for å legge til din første affiliate.
+          affiliate:
+            view_live_html: Vis hvordan denne affiliate ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne affiliate
+            delete: Fjern denne affiliate permanent
+      affiliates:
+        show:
+          other: Andre Affiliates
+  activerecord:
+    attributes:
+      'refinery/affiliates/affiliate':
+        url: Url
+        title: Title
+        specialist: Specialist
+        photo: Photo

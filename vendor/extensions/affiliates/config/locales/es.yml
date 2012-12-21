@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      affiliates:
+        title: Affiliates
+#        article: masculino/femenino
+    affiliates:
+      admin:
+        affiliates:
+          actions:
+            create_new: Crear nuevo affiliate
+            reorder: Reordenar affiliates
+            reorder_done: Reordenación de affiliates completada
+          records:
+            title: Affiliates
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay affiliates todavía. Pulsa en "Crear nuevo Affiliate" para crear tu primer affiliate.
+          affiliate:
+            view_live_html: Ver este affiliate como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este affiliate
+            delete: Borrar este affiliate para siempre
+      affiliates:
+        show:
+          other: Otros affiliates
+  activerecord:
+    attributes:
+      'refinery/affiliates/affiliate':
+        url: Url
+        title: Title
+        specialist: Specialist
+        photo: Photo

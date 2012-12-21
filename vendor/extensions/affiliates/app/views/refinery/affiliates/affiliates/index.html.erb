@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="affiliates">
+    <% @affiliates.each do |affiliate| %>
+      <li>
+        <%= link_to affiliate.url, refinery.affiliates_affiliate_path(affiliate) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

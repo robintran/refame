@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      affiliates:
+        title: Affiliates
+    affiliates:
+      admin:
+        affiliates:
+          actions:
+            create_new: Add New Affiliate
+            reorder: Reorder Affiliates
+            reorder_done: Done Reordering Affiliates
+          records:
+            title: Affiliates
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Affiliates yet. Click "Add New Affiliate" to add your first affiliate.
+          affiliate:
+            view_live_html: View this affiliate live <br/><em>(opens in a new window)</em>
+            edit: Edit this affiliate
+            delete: Remove this affiliate forever
+      affiliates:
+        show:
+          other: Other Affiliates
+  activerecord:
+    attributes:
+      'refinery/affiliates/affiliate':
+        url: Url
+        title: Title
+        specialist: Specialist
+        photo: Photo

@@ -32,3 +32,5 @@ gem 'refinerycms-images'
 gem 'refinerycms-pages'
 gem 'refinerycms-resources'
 
+
+gem 'refinerycms-affiliates', :path => 'vendor/extensions'

@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      affiliates:
+        title: Affiliates
+    affiliates:
+      admin:
+        affiliates:
+          actions:
+            create_new: Maak een nieuwe Affiliate
+            reorder: Wijzig de volgorde van de Affiliates
+            reorder_done: Klaar met het wijzingen van de volgorde van de Affiliates
+          records:
+            title: Affiliates
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Affiliates. Druk op 'Maak een nieuwe Affiliate' om de eerste aan te maken.
+          affiliate:
+            view_live_html: Bekijk deze affiliate op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze affiliate
+            delete: Verwijder deze affiliate voor eeuwig
+      affiliates:
+        show:
+          other: Andere Affiliates
+  activerecord:
+    attributes:
+      'refinery/affiliates/affiliate':
+        url: Url
+        title: Title
+        specialist: Specialist
+        photo: Photo

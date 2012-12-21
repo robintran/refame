@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @affiliate.url %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Url</h1>
+    <p>
+      <%=raw @affiliate.url %>
+    </p>
+  </section>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @affiliate.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Specialist</h1>
+    <p>
+      <%=raw @affiliate.specialist %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%= image_fu @affiliate.photo, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="affiliates">
+      <% @affiliates.each do |affiliate| %>
+        <li>
+          <%= link_to affiliate.url, refinery.affiliates_affiliate_path(affiliate) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
