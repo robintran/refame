@@ -8,8 +8,8 @@ Refame::Application.routes.draw do
 
   devise_for :users,  :controllers => {:registrations => "users/registrations"}
 
+  root :to => 'home#index'
   mount Refinery::Core::Engine, :at => '/'
-  root :to => 'refinery/pages#home'
 
 end
 
