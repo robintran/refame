@@ -5,7 +5,9 @@ class CreateAffiliatesAffiliates < ActiveRecord::Migration
     create_table :refinery_affiliates do |t|
       t.string :url
       t.string :title
-      t.string :specialist
+      t.string :specialist1
+      t.string :specialist2
+      t.string :specialist3
       t.integer :photo_id
       t.integer :position
 

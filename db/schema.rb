@@ -16,11 +16,13 @@ ActiveRecord::Schema.define(:version => 20121221144859) do
   create_table "refinery_affiliates", :force => true do |t|
     t.string   "url"
     t.string   "title"
-    t.string   "specialist"
+    t.string   "specialist1"
+    t.string   "specialist2"
+    t.string   "specialist3"
     t.integer  "photo_id"
     t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "refinery_images", :force => true do |t|

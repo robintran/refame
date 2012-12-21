@@ -18,7 +18,7 @@
   <section>
     <h1>Specialist</h1>
     <p>
-      <%=raw @affiliate.specialist %>
+      <%=raw [@affiliate.specialist1, @affiliate.specialist2, @affiliate.specialist3].uniq.join(" + ") %>
     </p>
   </section>
   <section>
@@ -43,3 +43,4 @@
 <% end %>
 
 <%= render '/refinery/content_page' %>
+

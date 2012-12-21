@@ -3,9 +3,11 @@ module Refinery
     class Affiliate < Refinery::Core::BaseModel
       self.table_name = 'refinery_affiliates'
 
-      attr_accessible :url, :title, :specialist, :photo_id, :position
+      SPECIALISTA = ['lipstick', 'blush', 'eyeliner']
 
-      acts_as_indexed :fields => [:url, :title, :specialist]
+      attr_accessible :url, :title, :specialist1, :photo_id, :position, :specialist2, :specialist3
+
+      acts_as_indexed :fields => [:url, :title, :specialist1, :specialist2, :specialist3]
 
       validates :url, :presence => true, :uniqueness => true
 
@@ -13,3 +15,4 @@ module Refinery
     end
   end
 end
+
