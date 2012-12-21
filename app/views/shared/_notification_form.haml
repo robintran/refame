@@ -1,0 +1,10 @@
+#remote-notification.notification
+  .container
+    .x-icon.right
+    .clear
+    .header
+      .logo
+    .clear
+    .body
+      #notice= notice || alert || flash[:notice] || flash[:error] || session[:notice]
+      .clear

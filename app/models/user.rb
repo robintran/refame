@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles, :join_table => :roles_users
   has_many :plugins, :class_name => "UserPlugin", :order => "position ASC", :dependent => :destroy
 
+  def name
+    "#{first_name} #{last_name}"
+  end
+
   def plugins=(plugin_names)
     if persisted? # don't add plugins when the user_id is nil.
       UserPlugin.delete_all(:user_id => id)
@@ -59,6 +63,21 @@ class User < ActiveRecord::Base
 
     # return true/false based on validations
     valid?
+  end
+
+  def get_errors
+    error_list = {}
+    self.errors.messages.each do |key, val|
+      if val.to_s.include?('confirmation')
+        val.each do |error|
+          error_list[:password_confirmation] = key.to_s.capitalize + ' ' + error if error.include?('confirmation')
+          error_list[:password] = key.to_s.capitalize + ' ' + error if !error.include?('confirmation')
+        end
+      else
+        error_list[key.to_sym] = key.to_s.capitalize + ' ' + val[0]
+      end
+    end unless self.valid?
+    error_list
   end
 end
 

@@ -1,0 +1,13 @@
+#remote-signup-form.popup
+  = form_for :user, :url => "/users/sign_in" do |f|
+    = f.text_field :first_name, :placeholder => "First name"
+    .error.error-first-name
+    = f.text_field :last_name, :placeholder => "Last name"
+    .error.error-last-name
+    = f.text_field :email, :placeholder => "Email"
+    .error.error-email
+    = f.password_field :password, :placeholder => "Password"
+    .error.error-password
+    = f.password_field :password_confirmation, :placeholder => "Password confirmation"
+    .error.error-password-confirmation
+    = f.submit "Register", :class => "signup-button", :id => 'signup-btn'

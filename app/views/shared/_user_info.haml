@@ -1,0 +1,5 @@
+.user-info.right
+  .logout.right
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    = link_to "Logout", destroy_user_session_path, :method => :delete
+  = link_to "Welcome #{truncate(current_user.name, :length => 20)}", '', :id => "username-link", :class => 'right', :title => "Welcome #{current_user.name}"

@@ -1,0 +1,7 @@
+#remote-signin-form
+  = form_for :user, :url => "/users/sign_in" do |f|
+    = f.text_field :email, :id => "email", :placeholder => "Email"
+    = f.password_field :password, :id => "password", :placeholder => "Password"
+    = f.submit "Sign in", :id => "signin_btn", :class => "signin-button"
+    .right.error
+  = link_to "Register", "/users/sign_up", :id => "registration-link"
