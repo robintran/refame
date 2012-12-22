@@ -23,6 +23,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  gem 'fog'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'debugger'
@@ -35,3 +39,4 @@ gem 'refinerycms-resources'
 
 
 gem 'refinerycms-affiliates', :path => 'vendor/extensions'
+
