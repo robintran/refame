@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      affiliates:
+        title: Affiliates
+    affiliates:
+      admin:
+        affiliates:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Affiliate
+            reorder: Réordonner les Affiliates
+            reorder_done: Fin de réordonnancement des Affiliates
+          records:
+            title: Affiliates
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Affiliate. Cliquer sur "Créer un(e) nouve(au/l/lle) Affiliate" pour créer votre premi(er/ère) affiliate.'
+          affiliate:
+            view_live_html: Voir ce(t/tte) affiliate <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) affiliate
+            delete: Supprimer définitivement ce(t/tte) affiliate
+      affiliates:
+        show:
+          other: Autres Affiliates
+  activerecord:
+    attributes:
+      'refinery/affiliates/affiliate':
+        url: Url
+        title: Title
+        specialist: Specialist
+        photo: Photo

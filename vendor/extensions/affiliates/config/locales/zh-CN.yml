@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      affiliates:
+        title: Affiliates
+    affiliates:
+      admin:
+        affiliates:
+          actions:
+            create_new: 建立新的 Affiliate
+            reorder: 对 Affiliates 重新排序
+            reorder_done: 对 Affiliates 的重新排序结束
+          records:
+            title: Affiliates
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Affiliates yet. Click "Add New Affiliate" to add your first affiliate.
+            no_items_yet: 目前没有 Affiliates . 点击 "Add New Affiliate" 创建一个affiliate.
+          affiliate:
+            view_live_html: 查看 affiliate 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 affiliate
+            delete: 永久删除 affiliate
+      affiliates:
+        show:
+          other: 其他 Affiliates
+  activerecord:
+    attributes:
+      'refinery/affiliates/affiliate':
+        url: Url
+        title: Title
+        specialist: Specialist
+        photo: Photo
