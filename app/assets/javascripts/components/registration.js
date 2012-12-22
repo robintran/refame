@@ -21,12 +21,14 @@ var Registration = {
 }
 
 $(function() {
-  $('#registration-link').click(function(){
-    $('#remote-signup-form.popup').dialog({autoOpen: true, modal: true})
+  $('.email-registration').click(function(){
+    $(".registration-form").fadeOut();
+    $(".email-registration-form").css("left",($(document).width()/2)-200);
+    $('.email-registration-form').fadeIn();
     return false;
   })
-  $('#remote-signup-form form').submit(function() {
-    Registration.sendRegistrationInfo($(this).serialize(), '#remote-signup-form');
+  $('.email-registration-form form').submit(function() {
+    Registration.sendRegistrationInfo($(this).serialize(), '.email-registration-form');
     return false;
   });
 })

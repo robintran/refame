@@ -1,13 +1,37 @@
-#remote-signup-form.popup
+%article.lightBox.registration-form
+  %p
+    %img{:height => "47", :src => "/assets/logoName.png", :width => "168"}
+  %P Get Today's Favorite Looks
+  %p by Top Makeup Artists
+  %p register for FREE
+  %p
+    %img{:alt => "facebook", :height => "29", :src => "/assets/facebook.png", :width => "199"}
+  %p or
+  %p.email-registration register with Email
+
+%article.lightBox.email-registration-form
+  %p
+    %img{:height => "47", :src => "/assets/logoName.png", :width => "168"}
+  %P Get Today's Favorite Looks
+  %p by Top Makeup Artists
+  .textRegister register for FREE
   = form_for :user, :url => "/users/sign_in" do |f|
-    = f.text_field :first_name, :placeholder => "First name"
+    %label first name
+    = f.text_field :first_name
     .error.error-first-name
-    = f.text_field :last_name, :placeholder => "Last name"
+    %label last name
+    = f.text_field :last_name
     .error.error-last-name
-    = f.text_field :email, :placeholder => "Email"
+    %label email address
+    = f.text_field :email
     .error.error-email
-    = f.password_field :password, :placeholder => "Password"
+    %label password
+    = f.password_field :password
     .error.error-password
-    = f.password_field :password_confirmation, :placeholder => "Password confirmation"
+    %label password confirmation
+    = f.password_field :password_confirmation
     .error.error-password-confirmation
-    = f.submit "Register", :class => "signup-button", :id => 'signup-btn'
+    %label or you can
+    .imagealert
+      %img.left{:alt => "facebook", :height => "29", :src => "/assets/facebook.png", :width => "199"}
+      = image_submit_tag("signUp.png", :class => "sign-up-btn", :alt => "Sign up")
