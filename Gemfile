@@ -30,6 +30,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'debugger'
+  gem 'heroku'
 end
 
 gem 'refinerycms-dashboard'
