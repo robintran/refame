@@ -1,0 +1,9 @@
+%li#link
+  %a{:href => affiliate.url, :target => "_blank"}
+    = image_tag(affiliate.photo.url)
+    #steps
+      %p= affiliate.title
+      %span
+        %img{:src => "/assets/heart.png"}
+        = affiliate.specialist
+
