@@ -7,7 +7,10 @@ Refame::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, :at => '/refinery'
 
-  devise_for :users,  :controllers => {:registrations => "users/registrations"}
+  devise_for :users,  :controllers => {
+																		  	:sessions => "users/sessions",
+  																			:registrations => "users/registrations"
+  																		}
 
   root :to => 'home#index'
 

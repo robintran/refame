@@ -25,6 +25,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'debugger'
 end
 
 gem 'refinerycms-dashboard'

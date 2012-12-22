@@ -36,11 +36,11 @@
           #cbsi_f
             %p about / lorem ipsum
       - unless current_user
+        = render :partial => "shared/login_form"
         = render :partial => "shared/registration_form"
 
         :javascript
           $(function(){
-            $(".registration-form").css("left",($(document).width()/2)-200);
             $(".registration-form").fadeIn();
             $('#zoomContainer01').css({width:$(document).width(), height:$(document).height()}).show();
           });

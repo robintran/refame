@@ -1,7 +1,13 @@
-#remote-signin-form
+%article.lightBox.email-login-form
+  %p
+    %img{:height => "47", :src => "/assets/logoName.png", :width => "168"}
+  %P Get Today's Favorite Looks
+  %p by Top Makeup Artists
+  .textRegister Login with Email
   = form_for :user, :url => "/users/sign_in" do |f|
-    = f.text_field :email, :id => "email", :placeholder => "Email"
-    = f.password_field :password, :id => "password", :placeholder => "Password"
-    = f.submit "Sign in", :id => "signin_btn", :class => "signin-button"
-    .right.error
-  = link_to "Register", "/users/sign_up", :id => "registration-link"
+    .error
+    %label Email
+    = f.text_field :email
+    %label password
+    = f.password_field :password
+    = f.submit "Sign in", :id => "signin_btn", :class => "sign-in-btn"
