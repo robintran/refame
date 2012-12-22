@@ -9,9 +9,13 @@ module Refinery
 
       acts_as_indexed :fields => [:url, :title, :specialist1, :specialist2, :specialist3]
 
-      validates :url, :presence => true, :uniqueness => true
+      validates :url, :presence => true
 
       belongs_to :photo, :class_name => '::Refinery::Image'
+
+      def specialist
+        [specialist1, specialist2, specialist3].join(" + ")
+      end
     end
   end
 end

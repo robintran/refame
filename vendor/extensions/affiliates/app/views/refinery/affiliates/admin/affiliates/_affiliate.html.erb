@@ -1,14 +1,14 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(affiliate) -%>">
   <span class='title'>
-    <%= affiliate.url %>
+    <%= affiliate.title %>
 
   </span>
   <span class='actions'>
-    
+
     <%= link_to refinery_icon_tag("application_go.png"), refinery.affiliates_affiliate_path(affiliate),
         :title => t('.view_live_html'),
         :target => "_blank" %>
-    
+
     <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_affiliates_admin_affiliate_path(affiliate),
          :title => t('.edit') %>
     <%= link_to refinery_icon_tag("delete.png"), refinery.affiliates_admin_affiliate_path(affiliate),
@@ -18,3 +18,4 @@
         :method => :delete %>
   </span>
 </li>
+
