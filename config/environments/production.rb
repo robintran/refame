@@ -1,3 +1,11 @@
+#TODO: change these env variables to those from production app with correct callback URL
+ENV['FB_APP_ID'] = "263882923741158"
+ENV['FB_APP_SECRET'] = "2c92eeaeddaa925badb693220bd52dc6"
+ENV['TW_CONSUMER_KEY'] = "kmPQUKz2LXgCILLKCizuPQ"
+ENV['TW_CONSUMER_SECRET'] = "iyehzcukosh7yMzDB3oxDls9IbzGWU5tgBxK4QIMjY"
+ENV['TW_TOKEN'] = "553365516-9byNm3UnAAVwRSm8dRArQ6J1Ca9G39nVKTZw1boX"
+ENV['TW_TOKEN_SECRET'] = "kyzGBs90XZsUTsoPQ6t9HxSh1ORG74GZDqWV12II4"
+
 Refame::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 

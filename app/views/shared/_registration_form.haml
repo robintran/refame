@@ -4,7 +4,7 @@
   %P Get Today's Favorite Looks
   %p by Top Makeup Artists
   %p register for FREE
-  %p
+  %a{:href => '/users/auth/facebook'}
     %img{:alt => "facebook", :height => "29", :src => "/assets/facebook.png", :width => "199"}
   %p or
   %p.email-registration Register with Email
@@ -34,5 +34,6 @@
     .error.error-password-confirmation
     %label or you can
     .imagealert
-      %img.left{:alt => "facebook", :height => "29", :src => "/assets/facebook.png", :width => "199"}
+      %a{:href => '/users/auth/facebook'}
+        %img.left{:alt => "facebook", :height => "29", :src => "/assets/facebook.png", :width => "199"}
       = image_submit_tag("signUp.png", :class => "sign-up-btn", :alt => "Sign up")

@@ -7,12 +7,15 @@ Refame::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, :at => '/refinery'
 
+  match '/auth/:provider/callback', to: 'users/omniauth_callbacks#:provider'
+
+
   devise_for :users,  :controllers => {
 																		  	:sessions => "users/sessions",
-  																			:registrations => "users/registrations"
+  																			:registrations => "users/registrations",
+                                        :omniauth_callbacks => "users/omniauth_callbacks"
   																		}
 
   root :to => 'home#index'
-
 end
 

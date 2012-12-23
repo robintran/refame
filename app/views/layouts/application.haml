@@ -11,22 +11,26 @@
         .logo
         .social-nav
           %ul
-            %li
-              %a{:href => "#", :target => "_blank"}
-                %img{:alt => "Pinterest", :height => "33", :src => "/assets/pinterest.png", :width => "34"}
-            %li
-              %a{:href => "#", :target => "_blank"}
-                %img{:alt => "Twitter", :height => "33", :src => "/assets/twitter.png", :width => "34"}
-            %li
-              %a{:href => "#", :target => "_blank"}
-                %img{:alt => "Facebook", :height => "33", :src => "/assets/fb.png", :width => "34"}
             - if current_user
               %li
                 = link_to "Sign out", "/users/sign_out", :method => :delete
+            - else
+              %li
+                %a{:href => "#", :target => "_blank"}
+                  %img{:alt => "Pinterest", :height => "33", :src => "/assets/pinterest.png", :width => "34"}
+              %li
+                %a{:href => '/users/auth/twitter'}
+                  %img{:alt => "Twitter", :height => "33", :src => "/assets/twitter.png", :width => "34"}
+              %li
+                %a{:href => '/users/auth/facebook'}
+                  %img{:alt => "Facebook", :height => "33", :src => "/assets/fb.png", :width => "34"}
+
         #topmenu
           %ul.sf-menu
             %li.sfHover Get this look
         #content
+          %p#notice.notice= notice
+          %p#alert.alert= alert
           #large_box
         #zoomContainer01
         .clearfix

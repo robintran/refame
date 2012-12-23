@@ -10,6 +10,12 @@ gem 'rails', '3.2.9'
 gem 'haml'
 gem 'haml-rails'
 gem 'thin'
+gem 'omniauth', '1.1.1'
+gem 'oauth2', '0.8.0'
+gem 'omniauth-facebook', '1.4.1'
+gem 'fb_graph', '2.5.0'
+gem 'omniauth-twitter', '0.0.12'
+gem 'twitter', '2.2.2'
 
 # Gems used only for assets and not required
 # in production environments by default.

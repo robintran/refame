@@ -398,7 +398,7 @@ p.email-registration, p.email-login {
   cursor: pointer;
 }
 
-.error {
+.error, .alert {
   color: red;
   min-height: 20px;
 }

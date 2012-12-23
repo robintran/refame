@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121221144859) do
+ActiveRecord::Schema.define(:version => 20121223043525) do
+
+  create_table "account_credentials", :force => true do |t|
+    t.string   "uid"
+    t.string   "token"
+    t.string   "token_secret"
+    t.string   "account_type"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "refinery_affiliates", :force => true do |t|
     t.string   "url"
