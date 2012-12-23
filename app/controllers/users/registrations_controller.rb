@@ -25,7 +25,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def register_with_email(params)
     user = User.new(params[:user])
     if user.save
-      { :success => true, :msg => "Please check your email #{user.email}. We have sent a confirmation instruction there.", :path => root_path}
+      { :success => true, :msg => "Please check your email #{user.email}. We have sent a confirmation instruction there.",
+                          :path => refinery.root_path }
     else
       { :success => false, :msg => user.get_errors }
     end

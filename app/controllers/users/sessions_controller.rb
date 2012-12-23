@@ -16,7 +16,9 @@ class Users::SessionsController < Devise::SessionsController
     scope = Devise::Mapping.find_scope!(resource_or_scope)
     resource ||= resource_or_scope
     sign_in(scope, resource) unless warden.user(scope) == resource
-    return render :json => { :success => true, :path => stored_location_for(scope) || root_path }
+    return render :json => { :success => true, :path => resource.has_role?('refinery') ?
+                                                        refinery.admin_root_path :
+                                                        refinery.root_path }
   end
 
   def unconfirmed
