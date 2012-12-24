@@ -5,6 +5,7 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    %meta{:content => "#{ENV['FB_APP_ID']}", :property => "fb:app_id"}
   %body
     #wrapper
       .s1
@@ -25,9 +26,6 @@
                 %a{:href => '/users/auth/facebook'}
                   %img{:alt => "Facebook", :height => "33", :src => "/assets/fb.png", :width => "34"}
 
-        #topmenu
-          %ul.sf-menu
-            %li.sfHover Get this look
         #content
           %p#notice.notice= notice
           %p#alert.alert= alert
@@ -39,6 +37,16 @@
         #footer_content
           #cbsi_f
             %p about / lorem ipsum
+
+      #fb-root
+      :javascript
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
       - unless current_user
         = render :partial => "shared/login_form"
         = render :partial => "shared/registration_form"
