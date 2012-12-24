@@ -1,4 +1,9 @@
 class Users::SessionsController < Devise::SessionsController
+  def new
+    self.resource = build_resource(nil, :unsafe => true)
+    clean_up_passwords(resource)
+    redirect_to root_path
+  end
 
   def create
     resource = catch(:warden)  { warden.authenticate!(:scope => resource_name, :recall => 'sessions#failure') }
