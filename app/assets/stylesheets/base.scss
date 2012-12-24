@@ -124,6 +124,8 @@ border:2px solid #e7e7e7;
   overflow: hidden;
   height: 43px;
   width: 100%;
+  position: fixed;
+  bottom: 0px;
 }
 #footer #cbsi_f{
   float:right;
@@ -408,3 +410,4 @@ p.email-registration, p.email-login {
   font-weight: bold;
   margin-top: 20px;
 }
+

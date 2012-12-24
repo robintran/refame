@@ -9,7 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   protected
   def after_omniauth_failure_path_for(scope)
-    refinery.root_path
+    main_app.root_path
   end
 
   private
@@ -20,10 +20,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if user && user.valid?
       sign_in(:user, user)
       flash[:notice] = "successfully logged in."
+      redirect_to refinery.root_path
+      return
     else
       flash[:alert] = user.errors.to_a.first
+      redirect_to main_app.root_path
     end
-    redirect_to refinery.root_path
   end
 
   def store_account_credentials(type, omniauth)
@@ -41,3 +43,4 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user
   end
 end
+
