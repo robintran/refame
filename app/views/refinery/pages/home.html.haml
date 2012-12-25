@@ -1,157 +1,38 @@
-#wrapper
-  .s1
-    .products
-      .productsLeft
-        = image_tag("michele.png", :alt => "image")
-        .productPrint
-          %a{:href => ""}
-            = image_tag("like.png")
-          %a{:href => ""}
-            = image_tag("print.png")
-          %a{:href => ""}
-            = image_tag("tweet.png")
-        .clearfix
-        .productLhead
-          %ul.sf-menu
-            %li.sfHover.productM How to get this look
-        = image_tag("miralenevedio.png", :alt => "vedio")
-        .productSteps
-          %ul
-            %li
-              = image_tag("lips.png", :alt => "lips")
-              %span
-                %h4 Step one
-                %h5 signature lips
-                %p
-                  Ultricies a pellentesque at, viverra vitae turpis.
-                  %b Donec semper
-                  ris us at varius venenatis, orci sem vulputate augue, at dictum turpis
-                  %b turpis
-                  eu nisl vestib ul.
-            %li
-              = image_tag("face.png", :alt => "face")
-              %span
-                %h4 Step two
-                %h5 perfect blush
-                %p
-                  Ultricies a pellentesque at, viverra vitae turpis.
-                  %b Donec semper
-                  ris us at varius venenatis, orci sem vulputate augue, at dictum turpis
-                  %b turpis
-                  eu nisl vestib ul.
-            %li
-              = image_tag("eye.png", :alt => "eye")
-              %span
-                %h4 Step three
-                %h5 dramatic eye
-                %p
-                  Ultricies a pellentesque at, viverra vitae turpis.
-                  %b Donec semper
-                  ris us at varius venenatis, orci sem vulputate augue, at dictum turpis
-                  %b turpis
-                  eu nisl vestib ul.
-      .clearfix
-      .productsRight
-        .productRhead
-          %ul.sf-menu
-            %li.productR
-              %p Michelle as Marylin Look
-              = image_tag("michelethumb.png", :alt => "thimb")
-              %span
-                by
-                %i Lauren
-        .productquote
-          %b &#147;
-          I absolutely love this look. Michelle looks so similar to Marilyn Monroe!
-          %b &#148;
-        .splurgeSave
-          .splurge
-            .splurgeH Splurge
-            %ul
-              %li
-                = image_tag("lip.png", :alt => "lip")
-                %span
-                  %p MAC tinting
-                  %span lipstick
-                  %p $25
-                .buy
-                  %button BUY
-                  at drugstore
-              %li
-                = image_tag("blush.png", :alt => "blush")
-                %span
-                  %p MAC tinting
-                  %span lipstick
-                  %p $25
-                .buy
-                  %button BUY
-                  at drugstore
-              %li
-                = image_tag("brand.png", :alt => "brand")
-                %span
-                  %p MAC tinting
-                  %span lipstick
-                  %p $25
-                .buy
-                  %button BUY
-                  at drugstore
-              %ul
-          .save
-            .splurgeH Save
-            %ul
-              %li
-                = image_tag("lipstick.png", :alt => "lipstick")
-                %span
-                  %p MAC tinting
-                  %span lipstick
-                  %p $25
-                .buy
-                  %button BUY
-                  at drugstore
-              %li
-                = image_tag("pink.png", :alt => "pink")
-                %span
-                  %p MAC tinting
-                  %span lipstick
-                  %p $25
-                .buy
-                  %button BUY
-                  at drugstore
-              %li
-                = image_tag("talcom.png", :alt => "talcom")
-                %span
-                  %p MAC tinting
-                  %span lipstick
-                  %p $25
-                .buy
-                  %button BUY
-                  at drugstore
-              %ul
-        .lordetails
-          = image_tag("imageheart.png", :alt => "imageheart")
-          %p Lauren
-          %span youtube makeup artist
-          %p.lorem
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nunc ac ligula non nisl aliquet venenatis. Pellentesque habitant morbi tristique senectus.
-          %span.lorem
-            Nunc felis turpis, ultricies a pellentesque at, viverra vitae turpis
-            %b viverra vitae turpis
-            Donec semper, risus at varius venenatis, orci sem vulputate augue, at dictum turpis turpis eu
-            nisl. Vestib ulum lobortis facilisis nibh, feugiat congue dolor rhoncus quis.
-            Nunc felis turpis, ultricies a pellentesque at, viverra vitae turpis.
-          %ul
-            %li risus at varius venenatis
-            %li feugiat congue dolor rhoncus quis
-            %li risus at varius venenatis
-          %span.lorem
-            Donec semper, risus at varius venenatis, orci sem vulputate augue,
-            at dictum turpis turpis eu nisl. Vestib ulum lobortis facilisis nibh, feugiat .
-          %span.written -Lauren
-        .productLhead
-          %ul.sf-menu
-            %li.sfHover.productM Message Lauren
-        .commentface
-          .fb-comments{"data-href" => "http://refame.com", "data-num-posts" => "5", "data-width" => "510"}
+.products
+  .productsLeft
+    = raw @page.content_for(:title_photo)
+    .productPrint
+      %a{:href => ""}
+        = image_tag("like.png")
+      %a{:href => ""}
+        = image_tag("print.png")
+      %a{:href => ""}
+        = image_tag("tweet.png")
     .clearfix
-
+    .productLhead
+      %ul.sf-menu
+        %li.sfHover.productM How to get this look
+    = raw @page.content_for(:video)
+    = raw @page.content_for(:steps)
+  .clearfix
+  .productsRight
+    .productRhead
+      %ul.sf-menu
+        %li.productR
+          %p Michelle as Marylin Look
+          = image_tag("michelethumb.png", :alt => "thimb")
+          %span
+            by
+            %i Lauren
+    .productquote
+      %b &#147;
+      I absolutely love this look. Michelle looks so similar to Marilyn Monroe!
+      %b &#148;
+    = raw @page.content_for(:products)
+    = raw @page.content_for(:introduce_part)
+    .productLhead
+      %ul.sf-menu
+        %li.sfHover.productM Message Lauren
+    .commentface
+      .fb-comments{"data-href" => "http://refame.com", "data-num-posts" => "5", "data-width" => "510"}
+.clearfix
