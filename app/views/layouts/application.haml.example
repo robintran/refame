@@ -24,7 +24,6 @@
               %li
                 %a{:href => '/users/auth/facebook'}
                   %img{:alt => "Facebook", :height => "33", :src => "/assets/fb.png", :width => "34"}
-
         #topmenu
           %ul.sf-menu
             %li.sfHover Get this look

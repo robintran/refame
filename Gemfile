@@ -43,6 +43,7 @@ gem 'refinerycms-dashboard'
 gem 'refinerycms-images'
 gem 'refinerycms-pages'
 gem 'refinerycms-resources'
+gem 'refinerycms-settings'
 
 
 gem 'refinerycms-affiliates', :path => 'vendor/extensions'

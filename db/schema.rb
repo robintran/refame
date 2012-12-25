@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121223043525) do
+ActiveRecord::Schema.define(:version => 20121225022021) do
 
   create_table "account_credentials", :force => true do |t|
     t.string   "uid"
@@ -117,6 +117,19 @@ ActiveRecord::Schema.define(:version => 20121223043525) do
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
+
+  create_table "refinery_settings", :force => true do |t|
+    t.string   "name"
+    t.text     "value"
+    t.boolean  "destroyable",     :default => true
+    t.string   "scoping"
+    t.boolean  "restricted",      :default => false
+    t.string   "form_value_type"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+  end
+
+  add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
 
   create_table "roles", :force => true do |t|
     t.string "title"

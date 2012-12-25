@@ -226,6 +226,8 @@ GEM
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.9)
+    refinerycms-settings (2.0.2)
+      refinerycms-core (~> 2.0.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec-core (2.12.2)
@@ -305,6 +307,7 @@ DEPENDENCIES
   refinerycms-images
   refinerycms-pages
   refinerycms-resources
+  refinerycms-settings
   rspec-rails
   sass-rails (~> 3.2.3)
   therubyracer
