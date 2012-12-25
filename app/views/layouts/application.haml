@@ -1,0 +1,59 @@
+!!!
+%html
+  %head
+    %title ::- ReFame -::
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta{:content => "#{ENV['FB_APP_ID']}", :property => "fb:app_id"}
+  %body
+    #wrapper
+      .s1
+        .logo
+        .social-nav
+          %ul
+            - if current_user
+              %li
+                = link_to "Sign out", "/users/sign_out", :method => :delete
+            - else
+              %li
+                %a{:href => "#", :target => "_blank"}
+                  %img{:alt => "Pinterest", :height => "33", :src => "/assets/pinterest.png", :width => "34"}
+              %li
+                %a{:href => '/users/auth/twitter'}
+                  %img{:alt => "Twitter", :height => "33", :src => "/assets/twitter.png", :width => "34"}
+              %li
+                %a{:href => '/users/auth/facebook'}
+                  %img{:alt => "Facebook", :height => "33", :src => "/assets/fb.png", :width => "34"}
+        #content
+          %p#notice.notice= notice
+          %p#alert.alert= alert
+          #large_box
+        #zoomContainer01
+        .clearfix
+        = yield
+      #footer
+        #footer_content
+          #cbsi_f
+            %p about / lorem ipsum
+
+      #fb-root
+      :javascript
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      - unless current_user
+        = render :partial => "shared/login_form"
+        = render :partial => "shared/registration_form"
+
+        :javascript
+          $(function(){
+            $(".registration-form, .email-login-form, .email-registration-form").css("left",($(document).width()/2)-200);
+            $(".registration-form, .email-login-form, .email-registration-form").css("top", 120);
+            $(".registration-form").fadeIn();
+            $('#zoomContainer01').css({width:$(document).width(), height:$(document).height()}).show();
+          });
