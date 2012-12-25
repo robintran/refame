@@ -1,6 +1,6 @@
 .products
   .productsLeft
-    = raw @page.content_for(:title_photo)
+    = raw @page.content_for(:title_photo).split("<p>")[1].split("</p>")[0]
     .productPrint
       %a{:href => ""}
         = image_tag("like.png")
