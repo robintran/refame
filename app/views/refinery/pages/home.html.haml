@@ -1,13 +1,17 @@
 .products
   .productsLeft
-    = raw @page.content_for(:title_photo).split("<p>")[1].split("</p>")[0]
+    - if @page.content_for(:title_photo)
+      = raw @page.content_for(:title_photo).split("<p>")[1].split("</p>")[0]
     .productPrint
-      %a{:href => ""}
-        = image_tag("like.png")
-      %a{:href => ""}
-        = image_tag("print.png")
-      %a{:href => ""}
-        = image_tag("tweet.png")
+      .social-net
+        %fb:like{ :href=>"#{root_url}", :layout=>"button_count", :'show_faces'=>"false", :send=>'false', :width=>"auto",
+          :action=>"like", :font=>"segoe ui", :colorscheme=>"light"}
+      .social-net
+        %a.pin-it-button{ :href=>"http://pinterest.com/pin/create/button/?url=#{root_url}&media=#{request.base_url}#{asset_path('michele.png')}&description=.", :'count-layout'=>"horizontal", :'always-show-count'=>"1"}
+          %img{ :border=>"0", :src=>"http://assets.pinterest.com/images/PinExt.png", :title=>"Pin It"}
+      .social-net
+        %a.twitter-share-button{ :href=>"https://twitter.com/share", :'data-url'=>"#{root_url}" }  Tweet
+
     .clearfix
     .productLhead
       %ul.sf-menu
@@ -36,3 +40,22 @@
     .commentface
       .fb-comments{"data-href" => "http://refame.com", "data-num-posts" => "5", "data-width" => "510"}
 .clearfix
+
+%script{:src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}
+%script{:type=>"text/javascript", :src=>"http://assets.pinterest.com/js/pinit.js"}
+:erb
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+:javascript
+  function initFacebookPinit() {
+    js = $('script[src*="assets.pinterest.com/js/pinit.js"]');
+    js.remove();
+    js = document.createElement('script');
+    js.src = "http://assets.pinterest.com/js/pinit.js";
+    js.type = 'text/javascript';
+    document.body.appendChild(js);
+    FB.init({  status : true,  cookie : true,  xfbml  : true});
+  }
+  $(document).ready(function(){
+     initFacebookPinit();
+  })
+
