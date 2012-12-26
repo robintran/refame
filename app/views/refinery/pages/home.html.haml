@@ -1,13 +1,18 @@
 .products
   .productsLeft
-    = raw @page.content_for(:title_photo).split("<p>")[1].split("</p>")[0]
+    - if @page.content_for(:title_photo)
+      = raw @page.content_for(:title_photo).split("<p>")[1].split("</p>")[0]
     .productPrint
-      %a{:href => ""}
-        = image_tag("like.png")
-      %a{:href => ""}
-        = image_tag("print.png")
-      %a{:href => ""}
-        = image_tag("tweet.png")
+      .social-net
+        %fb:like{ :href=>"#{root_url}", :layout=>"button_count", :'show_faces'=>"false", :send=>'false', :width=>"auto",
+          :action=>"like", :font=>"segoe ui", :colorscheme=>"light"}
+      .social-net
+        %a.pin-it-button{ :href=>"http://pinterest.com/pin/create/button/?url=#{root_url}&media=#{request.base_url}#{asset_path('michele.png')}&description=.", :'count-layout'=>"horizontal", :'always-show-count'=>"true"}
+          %img{ :border=>"0", :src=>"http://assets.pinterest.com/images/PinExt.png", :title=>"Pin It"}
+      .social-net
+        .twitter
+          %a.twitter-share-button{ :href=>"https://twitter.com/share", :'data-url'=>"#{root_url}" }  Tweet
+
     .clearfix
     .productLhead
       %ul.sf-menu
@@ -36,3 +41,4 @@
     .commentface
       .fb-comments{"data-href" => "http://refame.com", "data-num-posts" => "5", "data-width" => "510"}
 .clearfix
+
