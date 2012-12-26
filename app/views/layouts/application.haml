@@ -44,7 +44,20 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
       :erb
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>    
+
+      - unless current_user
+        = render :partial => "shared/login_form"
+        = render :partial => "shared/registration_form"
+
+        :javascript
+          $(function(){
+            $(".registration-form, .email-login-form, .email-registration-form").css("left",($(document).width()/2)-200);
+            $(".registration-form, .email-login-form, .email-registration-form").css("top", 120);
+            $(".registration-form").fadeIn();
+            $('#zoomContainer01').css({width:$(document).width(), height:$(document).height()}).show();
+          });
+
       :javascript
         function initFacebookPinit() {
           js = $('script[src*="assets.pinterest.com/js/pinit.js"]');
@@ -58,16 +71,4 @@
         $(document).ready(function(){
            initFacebookPinit();
         })
-
-      - unless current_user
-        = render :partial => "shared/login_form"
-        = render :partial => "shared/registration_form"
-
-        :javascript
-          $(function(){
-            $(".registration-form, .email-login-form, .email-registration-form").css("left",($(document).width()/2)-200);
-            $(".registration-form, .email-login-form, .email-registration-form").css("top", 120);
-            $(".registration-form").fadeIn();
-            $('#zoomContainer01').css({width:$(document).width(), height:$(document).height()}).show();
-          });
 
