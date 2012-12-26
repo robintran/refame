@@ -7,7 +7,7 @@
         %fb:like{ :href=>"#{root_url}", :layout=>"button_count", :'show_faces'=>"false", :send=>'false', :width=>"auto",
           :action=>"like", :font=>"segoe ui", :colorscheme=>"light"}
       .social-net
-        %a.pin-it-button{ :href=>"http://pinterest.com/pin/create/button/?url=#{root_url}&media=#{request.base_url}#{asset_path('michele.png')}&description=.", :'count-layout'=>"horizontal", :'always-show-count'=>"1"}
+        %a.pin-it-button{ :href=>"http://pinterest.com/pin/create/button/?url=#{root_url}&media=#{request.base_url}#{asset_path('michele.png')}&description=.", :'count-layout'=>"horizontal", :'always-show-count'=>"true"}
           %img{ :border=>"0", :src=>"http://assets.pinterest.com/images/PinExt.png", :title=>"Pin It"}
       .social-net
         .twitter
