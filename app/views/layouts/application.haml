@@ -4,6 +4,12 @@
     %title ::- ReFame -::
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    :javascript
+      if (window.location.hash == '#_=_') {
+        window.location.hash = '';
+        history.pushState('', document.title, window.location.pathname);
+        e.preventDefault();
+      }
     = csrf_meta_tags
     %meta{:content => "#{ENV['FB_APP_ID']}", :property => "fb:app_id"}
   %body
