@@ -326,7 +326,7 @@ border:2px solid #e7e7e7;
 
 .productR{font-size: 28px; margin:-6px 0 0 -20px !important;color: #FFFFFF;font-family: Arial,Helvetica,sans-serif;font-style: italic;font-weight: bold; float:left}
 
-.productRhead{ background:url("/assets/micheleng.png") no-repeat scroll 0 0 transparent; float:left; height:60px; width:517px; margin:0px 0 13px 0 !important}
+.productRhead{ background:url("/assets/micheleng.png") no-repeat scroll 0 0 transparent; float:left; height:60px; width:517px; margin:0px 0 0px 0 !important}
 
 .productRhead img{ margin:-3px 0 0 46px !important; float:left}
 
@@ -338,7 +338,7 @@ border:2px solid #e7e7e7;
 
 .productquote{ font-family:"Proxima Nova Lt"; font-size:22px; margin:0 0 0 19px; float:left}
 
-.productquote b{font-family:ProximaNova Extrabold; font-size:22px; font-weight:bolder}
+.productquote b{font-family:ProximaNova Extrabold; font-size:50px; font-weight:bolder}
 
 .splurgeSave{ width:515px; float:left; margin:17px 0 17px 13px}
 
@@ -350,17 +350,17 @@ border:2px solid #e7e7e7;
 
 .splurge ul li span{width:86px; float:left; height:100%; margin-right:12px}
 
-.splurge ul li span p{ font-family:ProximaNova SemiboldIt; font-size:16px; margin-bottom:0px; margin-top:10px; font-weight:bold}
+.splurge ul li span p{ font-family:ProximaNova SemiboldIt; font-size:16px; margin-bottom:0px; margin-top:10px; font-weight:bolder; font-style:italic}
 
-.splurge ul li span span{font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:11px}
+.splurge ul li span span{font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:11px; font-weight:bolder}
 
 .splurge ul li img{ margin:0 10px 0 10px; float:left; width:55px}
 
-.buy{ width:63px; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:9px; float:left;margin-top:10px}
+.buy{ width:63px; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-weight:bolder; font-size:10px; float:left;margin-top:10px}
 
 .buy button{ background:url(/assets/redbtn.png); height:34px; padding:0px 12px 0 12px;font-family:ProximaNova Semibold; font-size:15px; color:#FFF; border:none; cursor:pointer; }
 
-.splurgeH{ background:#f4f4f4; padding:13px 76px 13px 76px; font-family:"Proxima Nova Lt"; font-size:26px; text-align:center}
+.splurgeH{ background:#f4f4f4; padding:13px 76px 13px 76px; font-family:"Proxima Nova Lt"; font-size:26px; font-style:italic ; text-align:center; border-bottom: 2px solid #e7e7e7;}
 
 .save { width:243px;border:2px solid #e7e7e7; height:100%; float:left}
 
@@ -370,7 +370,7 @@ border:2px solid #e7e7e7;
 
 .save ul li span{width:86px; float:left; height:100%; margin-right:12px}
 
-.save ul li span p{ font-family:ProximaNova SemiboldIt; font-size:16px; margin-bottom:0px; margin-top:10px; font-weight:bold}
+.save ul li span p{ font-family:ProximaNova SemiboldIt; font-size:16px; margin-bottom:0px; margin-top:10px; font-weight:bold; font-style:italic}
 
 .save ul li span span{font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:11px}
 
