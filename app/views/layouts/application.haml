@@ -3,7 +3,9 @@
   %head
     %title ::- ReFame -::
     = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "base", :media => "all"
     = javascript_include_tag "application"
+    = javascript_include_tag "components/popup"
     :javascript
       if (window.location.hash == '#_=_') {
         window.location.hash = '';
@@ -61,8 +63,8 @@
           $(function(){
             $(".registration-form, .email-login-form, .email-registration-form").css("left",($(document).width()/2)-200);
             $(".registration-form, .email-login-form, .email-registration-form").css("top", 120);
-            $(".registration-form").fadeIn();
-            $('#zoomContainer01').css({width:$(document).width(), height:$(document).height()}).show();
+            $(".email-login-form").fadeIn();
+            $('#zoomContainer01').css({width:$(document).width(), height:$(document).height()}).show();           
           });
 
       :javascript
