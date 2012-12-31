@@ -262,7 +262,7 @@ border:2px solid #e7e7e7;
   text-align:center;
 }
 .lightBox #or{
-  font-size: 12px;  
+  font-size: 12px;
 }
 .lightBox img{
   margin:18px 0px;
@@ -358,7 +358,7 @@ border:2px solid #e7e7e7;
 
 .buy{ width:63px; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-weight:bolder; font-size:10px; float:left;margin-top:10px}
 
-.buy button{ background:url(/assets/redbtn.png); height:34px; padding:0px 12px 0 12px;font-family:ProximaNova Semibold; font-size:15px; color:#FFF; border:none; cursor:pointer; }
+.buy button, .buy a { background:url(/assets/redbtn.png); height:34px; padding:0px 12px 0 12px;font-family:ProximaNova Semibold; font-size:15px; color:#FFF; border:none; cursor:pointer; }
 
 .splurgeH{ background:#f4f4f4; padding:13px 76px 13px 76px; font-family:"Proxima Nova Lt"; font-size:26px; font-style:italic ; text-align:center; border-bottom: 2px solid #e7e7e7;}
 
