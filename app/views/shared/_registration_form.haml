@@ -3,20 +3,19 @@
     %img{:height => "47", :src => "/assets/logoName.png", :width => "168"}
   %P Get Today's Favorite Looks
   %p by Top Makeup Artists
-  %p
-    .textRegister register for FREE
+  %p.textRegister register for FREE
   %a{:href => '/users/auth/facebook'}
     %img{:alt => "facebook", :height => "29", :src => "/assets/facebook.png", :width => "199"}
   %p or
   %p.email-registration Register with Email
-  %p.email-login Login with Email
+  %p.email-login Log in
 
 %article.lightBox.email-registration-form
   %p
     %img{:height => "47", :src => "/assets/logoName.png", :width => "168"}
   %P Get Today's Favorite Looks
   %p by Top Makeup Artists
-  .textRegister register for FREE
+  %p.textRegister register for FREE
   = form_for :user, :url => "/users/sign_in" do |f|
     %label first name
     = f.text_field :first_name

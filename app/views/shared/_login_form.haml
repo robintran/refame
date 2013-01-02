@@ -3,18 +3,10 @@
     %img{:height => "47", :src => "/assets/logoName.png", :width => "168"}
   %P Get Today's Favorite Looks
   %p by Top Makeup Artists
-  %p
-    .textRegister register for FREE
-  %a{:href => '/users/auth/facebook'}
-    %img{:alt => "facebook", :height => "29", :src => "/assets/facebook.png", :width => "199"}
-  %p
-    .textRegister or
-  %br
-  %p.email-registration register with email
   = form_for :user, :url => "/users/sign_in" do |f|
     .error
     %label email address
     = f.text_field :email
     %label password
     = f.password_field :password
-    = f.submit "SIGN IN", :id => "signin_btn", :class => "sign-in-btn"
+    = f.submit "LOG IN", :id => "signin_btn", :class => "sign-in-btn"

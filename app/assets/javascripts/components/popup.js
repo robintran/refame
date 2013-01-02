@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   $('#zoomContainer01').click(function () {
     $('#zoomContainer01').show();
-    $(".email-login-form").fadeIn();
+    $(".registration-form").fadeIn();
     return false;
   });
 

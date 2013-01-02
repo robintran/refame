@@ -408,7 +408,15 @@ border:2px solid #e7e7e7;
   font-weight: bold;
 }
 
-p.email-registration, p.email-login {
+p.email-registration{
+  cursor: pointer;
+  font-style: italic;
+  font-size: 12px;
+  text-decoration:underline;
+  margin-top:18px;
+}
+
+p.email-login {
   cursor: pointer;
   font-style: italic;
   font-size: 12px;
@@ -420,10 +428,9 @@ p.email-registration, p.email-login {
   min-height: 20px;
 }
 
-.textRegister {
-  font-size: 11px;
+p.textRegister {
+  font-size: 22px;
   font-weight: bold;
-  margin-top: 20px;
   font-style:italic;
 }
 
