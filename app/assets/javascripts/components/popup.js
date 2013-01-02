@@ -7,6 +7,8 @@ $(document).ready(function () {
 
   $('#zoomContainer01').click(function () {
     $('#zoomContainer01').show();
+    $(".email-login-form").fadeOut();
+    $(".email-registration-form").fadeOut();
     $(".registration-form").fadeIn();
     return false;
   });
