@@ -5,7 +5,7 @@ Refame::Application.routes.draw do
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
-  mount Refinery::Core::Engine, :at => '/refinery'
+  mount Refinery::Core::Engine, :at => '/product'
 
   match '/auth/:provider/callback', to: 'users/omniauth_callbacks#:provider'
 
