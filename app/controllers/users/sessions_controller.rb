@@ -23,7 +23,7 @@ class Users::SessionsController < Devise::SessionsController
     sign_in(scope, resource) unless warden.user(scope) == resource
     return render :json => { :success => true, :path => resource.has_role?('refinery') ?
                                                         refinery.admin_root_path :
-                                                        refinery.root_path }
+                                                        main_app.root_path }
   end
 
   def unconfirmed
