@@ -1,6 +1,6 @@
 %li#link
   %a{:href => "/product"}
-    = image_tag(affiliate.photo.url)
+    = image_tag(affiliate.photo.try(:url))
     #steps
       %p= affiliate.title
       %span
