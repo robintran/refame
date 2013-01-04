@@ -11,7 +11,7 @@ module Refinery
 
       belongs_to :photo, :class_name => '::Refinery::Image'
 
-      validate_presence_of :photo
+      validates_presence_of :photo
 
       def specialist
         [specialist1, specialist2, specialist3].join(" + ")
